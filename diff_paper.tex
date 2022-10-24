@@ -1,0 +1,127 @@
+\documentclass[ALICE,manyauthors]{cernphprep}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL /home/kimb/Downloads/aaa/paper.tex   Mon Oct 17 02:43:32 2022
+%DIF ADD /home/kimb/Downloads/bbb/paper.tex   Mon Oct 17 02:43:19 2022
+
+\usepackage[comma,square,numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage{lineno}
+\usepackage{subfigure}
+\usepackage[section]{placeins}
+\usepackage {multicol}% Multi column in the table
+\usepackage {multirow}% Multi row in the table
+\usepackage {units}
+\usepackage {array}
+\usepackage {xcolor}
+\usepackage{comment}
+\linenumbers
+
+\input{commands.tex}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFaddtex}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdeltex}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+\providecommand{\DIFmodbegin}{} %DIF PREAMBLE
+\providecommand{\DIFmodend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF HYPERREF PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{\texorpdfstring{\DIFaddtex{#1}}{#1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{\texorpdfstring{\DIFdeltex{#1}}{}} %DIF PREAMBLE
+%DIF LISTINGS PREAMBLE %DIF PREAMBLE
+\RequirePackage{listings} %DIF PREAMBLE
+\RequirePackage{color} %DIF PREAMBLE
+\lstdefinelanguage{DIFcode}{ %DIF PREAMBLE
+%DIF DIFCODE_UNDERLINE %DIF PREAMBLE
+  moredelim=[il][\color{red}\sout]{\%DIF\ <\ }, %DIF PREAMBLE
+  moredelim=[il][\color{blue}\uwave]{\%DIF\ >\ } %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstdefinestyle{DIFverbatimstyle}{ %DIF PREAMBLE
+	language=DIFcode, %DIF PREAMBLE
+	basicstyle=\ttfamily, %DIF PREAMBLE
+	columns=fullflexible, %DIF PREAMBLE
+	keepspaces=true %DIF PREAMBLE
+} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim}{\lstset{style=DIFverbatimstyle}}{} %DIF PREAMBLE
+\lstnewenvironment{DIFverbatim*}{\lstset{style=DIFverbatimstyle,showspaces=true}}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+
+\PHyear{}
+\PHnumber{2021-xxx}      % required, will be obtained from PH
+%\PHdate{Day Month}  % required, will be obtained from PH
+\PHdate{\today}
+%
+
+%%% Put your own title + short title here:
+\title{Observation of abnormal suppression of $\mathrm{f}_{0}$(980) production \DIFaddbegin \\\DIFaddend in p--Pb collisions at $\snn$ = 5.02~TeV }
+
+\ShortTitle{}   % appears on right page headers
+
+%%% Do not change the next lines
+%\Collaboration{ALICE Collaboration\thanks{See Appendix~\ref{app:collab} for the list of collaboration members}}
+\ShortAuthor{ALICE Collaboration} % appears on left page headers, do not change
+
+\begin{abstract}
+The multiplicity dependence of \DIFdelbegin \DIFdel{$\mathrm{f}_{0}$(980) production is measured }\DIFdelend \DIFaddbegin \fzero\DIFadd{\ production is reported }\DIFaddend in p--Pb collisions at \DIFdelbegin \DIFdel{$\snn$ = 5.02}\DIFdelend \DIFaddbegin \DIFadd{$\snn = 5.02$}\DIFaddend ~TeV with ALICE at the LHC. The production of \DIFdelbegin \DIFdel{$\mathrm{f}_{0}$(980) }\DIFdelend \DIFaddbegin \fzero\DIFadd{\ }\DIFaddend is measured via \DIFdelbegin \DIFdel{$\mathrm{f}_{0}\rm{(980)} \rightarrow \pi^{+}\pi^{-}$ decay channel at }\DIFdelend \DIFaddbegin \DIFadd{the $\mathrm{f}_0 (980) \rightarrow \pi^{+}\pi^{-}$ decay channel in a }\DIFaddend mid-rapidity \DIFdelbegin \DIFdel{(-0.5~$<\rm{y}<$~0)}\DIFdelend \DIFaddbegin \DIFadd{region of $-0.5<y<0$}\DIFaddend . Particle yield ratios of \fzero\DIFdelbegin \DIFdel{~}\DIFdelend \DIFaddbegin \DIFadd{\ }\DIFaddend to $\pi$ and \DIFdelbegin \DIFdel{$\rm{}K^{*}$ }\DIFdelend \DIFaddbegin \DIFadd{$\mathrm{K}^{*}$ }\DIFaddend are found to be decreasing with \DIFdelbegin \DIFdel{multiplicity. $p_{\rm{T}}$}\DIFdelend \DIFaddbegin \DIFadd{an increasing charged-particle multiplicity. }\pT\DIFaddend -differential yield ratios of \fzero\DIFdelbegin \DIFdel{~}\DIFdelend \DIFaddbegin \DIFadd{\ }\DIFaddend suggest different mechanisms for the suppression of \fzero\DIFdelbegin \DIFdel{~}\DIFdelend \DIFaddbegin \DIFadd{\ }\DIFaddend particles. Furthermore, nuclear modification factor (\qppb) is  measured in terms of the multiplicity\DIFdelbegin \DIFdel{class. }\DIFdelend \DIFaddbegin \DIFadd{. The }\DIFaddend \qppb~ shows strong suppression \DIFdelbegin \DIFdel{at low $p_{\rm{T}}$. The particle yield }\DIFdelend \DIFaddbegin \DIFadd{in a low }\pT\DIFadd{\ region. The particle-yield }\DIFaddend ratios and \qppb~ for \fzero\DIFdelbegin \DIFdel{~may be used }\DIFdelend \DIFaddbegin \DIFadd{\ may help }\DIFaddend to understand the late hadronic phase in p--Pb collisions and the nature of the internal structure of \fzero\DIFdelbegin \DIFdel{~}\DIFdelend \DIFaddbegin \DIFadd{\ }\DIFaddend particles.
+
+
+
+\color{black}
+
+\end{abstract}
+
+\end{titlepage}
+
+\setcounter{page}{2}
+
+\input{diff_sec_intro.tex}
+\input{sec_ana.tex}
+\input{sec_results.tex}
+\input{sec_summary.tex}
+
+
+
+%%%%% acknowledgements
+\newenvironment{acknowledgement}{\relax}{\relax}
+\begin{acknowledgement}
+\section*{Acknowledgements}
+\noindent 
+%{\it (TBI: The default acknowledgments will be done by EB centrally.)}
+%\input{acknowledgements.tex}    %%%%%%% done by webmaster team
+\end{acknowledgement}
+
+\newpage
+\appendix
+
+
+
+\clearpage
+
+\bibliographystyle{utphys}
+\bibliography{paper.bib}
+
+%%%%%%%%% appendix with author list
+%\section{The ALICE Collaboration}
+%\label{app:collab}
+%\input{Alice_Authorlist_2017-Aug-21.tex}  %%%%%%% done by webmaster team
+%\input{}     
+
+
+\end{document}
